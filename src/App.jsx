@@ -16,7 +16,7 @@ export default function App() {
   const [payloadType, setPayloadType] = useState('link');
 
   // Payload Data States
-  const [link, setLink] = useState('https://github.com');
+  const [link, setLink] = useState(import.meta.env.VITE_DEFAULT_URL || 'https://github.com');
   const [wifiData, setWifiData] = useState({ ssid: 'MyHomeWiFi', password: 'SecretPassword123', encryption: 'WPA' });
   const [vcardData, setVcardData] = useState({ firstName: 'Alex', lastName: 'Morgan', phone: '+1234567890', email: 'alex@example.com', organization: 'TechCorp', title: 'Lead Engineer' });
   const [emailData, setEmailData] = useState({ recipient: 'hello@example.com', subject: 'Inquiry', body: 'Hello!' });
